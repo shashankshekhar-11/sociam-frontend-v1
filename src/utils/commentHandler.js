@@ -5,7 +5,7 @@ import axios from "axios";
 const getCommentsOfPost = createAsyncThunk('comment/getCommentOfPost',
     async (postId, { rejectWithValue }) => {
         try {
-            const res = await axios.get(`http://localhost:8000/api/v1/posts/${postId}`);
+            const res = await axios.get(`https://sociam-backend-v1.onrender.com/api/v1/posts/${postId}`);
             // console.log("res.data");
             // console.log(res.data);
             // console.log("res.data");
@@ -24,7 +24,7 @@ const addNewCommentToPost = createAsyncThunk("comment/addNewComment",
         try {
             const { postId, comment } = commentMetaData;
             const { authToken } = getState().auth;
-            const res = await axios.post(`http://localhost:8000/api/v1/comments/create/${postId}`, {commentData: comment}, { headers: { Authorization: `Bearer ${authToken}` ,'Content-Type': 'application/json' } });
+            const res = await axios.post(`https://sociam-backend-v1.onrender.com/api/v1/comments/create/${postId}`, {commentData: comment}, { headers: { Authorization: `Bearer ${authToken}` ,'Content-Type': 'application/json' } });
             return res.data.data.comment;
         } catch (err) {
             console.log(err);
@@ -37,7 +37,7 @@ const deleteComment = createAsyncThunk('comment/deleteComment',
         try {
             const { postId, commentId } = commentMetaData;
             const { authToken } = getState().auth;
-            const res = await axios.post(`http://localhost:8000/api/v1/comments/destroy/${postId}/${commentId}`, {}, { headers: { Authorization: `Bearer ${authToken}` } });
+            const res = await axios.post(`https://sociam-backend-v1.onrender.com/api/v1/comments/destroy/${postId}/${commentId}`, {}, { headers: { Authorization: `Bearer ${authToken}` } });
             return res.data
         } catch (err) {
             console.log(err);

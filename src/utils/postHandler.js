@@ -6,7 +6,7 @@ import toastStyle from "./toastStyle";
 const getAllPosts = createAsyncThunk("posts/getAllPosts",
 async ()=>{
     try{
-        const res = await axios.get('http://localhost:8000/api/v1/posts/');
+        const res = await axios.get('https://sociam-backend-v1.onrender.com/api/v1/posts/');
         // console.log(res.data);
         return res.data;
     }catch(err){
@@ -17,7 +17,7 @@ async ()=>{
 const getCurrentPost = createAsyncThunk('posts/getSinglePost',
 async(postId, {rejectWithValue})=>{
     try{
-        const res = await axios.get(`http://localhost:8000/api/v1/posts/${postId}`);
+        const res = await axios.get(`https://sociam-backend-v1.onrender.com/api/v1/posts/${postId}`);
         return res.data;
     }catch(err){
         console.log(err);
@@ -30,7 +30,7 @@ async(postData, {getState, rejectWithValue})=>{
     try{
         const {authToken} = getState().auth;
         // console.log(authToken);
-        const res = await axios.post('http://localhost:8000/api/v1/posts/create',postData,{headers: 
+        const res = await axios.post('https://sociam-backend-v1.onrender.com/api/v1/posts/create',postData,{headers: 
         // {authorization: authToken}
         {
             Authorization: `Bearer ${authToken}`
@@ -55,7 +55,7 @@ const likeOrDislikePost = createAsyncThunk(
       try {
         const { authToken } = getState().auth;
         const res = await axios.get(
-          `http://localhost:8000/api/v1/likes/toggle/?id=${postData._id}&type=Post`,
+          `https://sociam-backend-v1.onrender.com/api/v1/likes/toggle/?id=${postData._id}&type=Post`,
           {
             headers: {
               Authorization: `Bearer ${authToken}`,
@@ -76,7 +76,7 @@ const bookmarkHandler = createAsyncThunk(
       try {
         const { authToken } = getState().auth;
         const res = await axios.post(
-          "http://localhost:8000/api/v1/bookmarks/toggle-bookmark",
+          "https://sociam-backend-v1.onrender.com/api/v1/bookmarks/toggle-bookmark",
           { postId: postData._id },
           {
             headers: {
@@ -99,7 +99,7 @@ const editPost = createAsyncThunk("post/editPost",
 async(postData, {getState, rejectWithValue})=>{
     try{
         const {authToken} = getState().auth;
-        const res = await axios.post("http://localhost:8000/api/v1/posts/edit",
+        const res = await axios.post("https://sociam-backend-v1.onrender.com/api/v1/posts/edit",
           postData,
           {
             headers: {
@@ -120,7 +120,7 @@ async(postData, {getState, rejectWithValue})=>{
         // console.log(postData);
         const {authToken} = getState().auth;
         // console.log(authToken);
-        const res = await axios.delete(`http://localhost:8000/api/v1/posts/destroy/${postData._id}`, {headers: {authorization:`Bearer ${authToken}`}});
+        const res = await axios.delete(`https://sociam-backend-v1.onrender.com/api/v1/posts/destroy/${postData._id}`, {headers: {authorization:`Bearer ${authToken}`}});
         // console.log(res.data);
         return res.data;
     }catch(err){

@@ -6,7 +6,7 @@ import toastStyle from "./toastStyle";
 const signupUser = createAsyncThunk("auth/signupUser",
     async (signupData, { rejectWithValue }) => {
         try {
-            const res = await axios.post('http://localhost:8000/api/v1/users/create', signupData);
+            const res = await axios.post('https://sociam-backend-v1.onrender.com/api/v1/users/create', signupData);
             toast.success("Signed Up Successfully", { style: toastStyle });
             
             return res.data;
@@ -20,7 +20,7 @@ const signupUser = createAsyncThunk("auth/signupUser",
 const loginUser = createAsyncThunk("auth/loginUser",
     async (loginData, { rejectWithValue }) => {
         try {
-            const {data} = await axios.post('http://localhost:8000/api/v1/users/create-session', loginData);
+            const {data} = await axios.post('https://sociam-backend-v1.onrender.com/api/v1/users/create-session', loginData);
             toast.success("You're successfully logged in.", { style: toastStyle });  
             // console.log(data);          
             return data;

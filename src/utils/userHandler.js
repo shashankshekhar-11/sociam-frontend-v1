@@ -7,7 +7,7 @@ const editUser = createAsyncThunk("user/editUser",
     async (userData, {getState, rejectWithValue}) => {
         try {
             const { authToken } = getState().auth;
-            const res = await axios.post('http://localhost:8000/api/v1/users/edit', userData, {
+            const res = await axios.post('https://sociam-backend-v1.onrender.com/api/v1/users/edit', userData, {
                 headers: { Authorization: `Bearer ${authToken}` } // Corrected to `Bearer ${authToken}`
             });
             toast.success("Profile updated successfully!", { style: toastStyle });
@@ -22,7 +22,7 @@ const editUser = createAsyncThunk("user/editUser",
 const getAllUsers = createAsyncThunk("users/getAllUsers",
 async ()=>{
     try{
-        const res = await axios.get('http://localhost:8000/api/v1/users/getallusers');
+        const res = await axios.get('https://sociam-backend-v1.onrender.com/api/v1/users/getallusers');
         // console.log(res.data);
         return res.data;
     } catch(err){
@@ -32,7 +32,7 @@ async ()=>{
 
 const getUser = async(userId) => {
     try {
-        const res = await axios.get(`http://localhost:8000/api/v1/users/getallusers/${userId}`);
+        const res = await axios.get(`https://sociam-backend-v1.onrender.com/api/v1/users/getallusers/${userId}`);
         return res.data
     } catch(err){
         console.log(err);

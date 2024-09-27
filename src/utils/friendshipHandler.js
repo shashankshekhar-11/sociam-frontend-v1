@@ -6,7 +6,7 @@ export const handleFriendshipToggle = async (userMetaData, authToken, dispatch) 
   try {
     const { friendUserId } = userMetaData;
     const res = await axios.post(
-      `http://localhost:8000/api/v1/users/toggle-friendship/${friendUserId}`,
+      `https://sociam-backend-v1.onrender.com/api/v1/users/toggle-friendship/${friendUserId}`,
       {},
       {
         headers: { Authorization: `Bearer ${authToken}` },
