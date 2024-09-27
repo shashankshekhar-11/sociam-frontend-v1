@@ -1,0 +1,45 @@
+.edit-post-modal {
+    min-width: 38rem;
+    height: 16rem;
+    background-color: var(--primary-bg-color);
+    border-radius: 0.25rem;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+    overflow-y: auto;
+}
+
+.edit-post-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-post-modal-close-btn:hover {
+    cursor: pointer;
+}
+
+.edit-post-modal-parent {
+    padding-right: 1rem;
+}
+
+.edit-post-submit-btn {
+    margin-top: 0.5rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .edit-post-modal {
+        min-width: 35rem;
+    }
+ }
+
+ @media only screen and (max-width: 600px) {
+    .edit-post-modal {
+        min-width: 25rem;
+    }
+ }
+
+ @media only screen and (max-width: 450px) {
+    .edit-post-modal {
+        min-width: 20rem;
+    }
+ }

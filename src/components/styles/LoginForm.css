@@ -1,0 +1,106 @@
+.Gbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0rem;
+}
+
+.login-main-text {
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.login-sec-text {
+    font-style: italic;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+
+.form-div-parent {
+    display: flex;
+    justify-content: center;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.email-div {
+    margin-bottom: 2rem;
+}
+
+.password-div {
+    margin-bottom: 1rem;
+}
+
+.form-div label {
+    margin-left: 0.2rem;
+}
+
+.form-div input {
+    width: 20rem;
+    padding: 0.75rem 0.5rem;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-color: var(--aside-bg-color);
+    color: var(--white);
+    caret-color: var(--submit-btn-color);
+}
+
+.form-div input:focus {
+   outline: none;
+   border: 2px solid var(--submit-btn-color);
+}
+
+.form-action-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.error-message{
+    color: red;
+    font-size: 0.8rem;
+    margin-left: 0.25rem;
+}
+
+.form-error input{
+    border: 2px solid red;
+}
+
+.action-txt {
+    color: var(--submit-btn-color);
+    font-weight: 500;
+    padding: 0.5rem 0.2rem;
+    max-width: fit-content;
+}
+
+.submit-btn {
+    background-color: var(--submit-btn-color);
+    padding: 0.4rem 1.25rem;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 0.875rem;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.submit-btn:hover {
+    background-color: var(--blue-700);
+}
+
+.action-txt:hover {
+    color: var(--blue-600);
+    cursor: pointer;
+}
+

@@ -1,0 +1,33 @@
+@import url("https://altur-ui.netlify.app/stylesheets/main.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300;400;500;700&display=swap');  
+
+:root {
+  --primary-bg-color: #181818;
+  --aside-bg-color: #212121;
+  --pp-primary-color: #3ea6ff;
+  --chip-color: #ffffff1a;
+  --chip-hover-color: #444444;
+  --tick-color: #AAAAAA;
+  --submit-btn-color: #1a73e8;
+  --menu-item-hover-color: #555555;
+  --scrollbar-hover-color: #f1f0f0e5;
+  --line-color: #ffffff5c;
+  --username-color: #71767b;
+}
+
+body {
+  margin: 0px;
+  /* width:100vw; */
+  height:100vh;
+  background-color: var(--primary-bg-color);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+#root{
+  height: 100%;
+  width: 100%;
+}
+.App{
+  height: 100%;
+  width: 100%;
+}

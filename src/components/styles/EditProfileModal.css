@@ -1,0 +1,171 @@
+.modal-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    backdrop-filter: blur(1px);
+}
+
+.modal-centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal {
+    min-width: 38rem;
+    height: 40rem;
+    background-color: var(--primary-bg-color);
+    border-radius: 0.25rem;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+    overflow-y: auto;
+}
+
+.modal-header {
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    padding-top: 0.75rem;
+}
+
+.edit-profile-modal-header {
+    border-bottom: 1px solid var(--line-color);
+    margin-bottom: 1.5rem;
+}
+
+.edit-profile-div-parent {
+    padding-left: 1rem;
+}
+
+.editpost-textarea {
+    width: 35rem;
+    border: 2px solid transparent;
+    background-color: var(--aside-bg-color);
+}
+
+.editpost-textarea:focus {
+    border: 2px solid var(--submit-btn-color);
+}
+
+.edit-profile-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.edit-profile-div label {
+    margin-left: 0.2rem;
+}
+
+
+.edit-profile-div input {
+    width: 35rem;
+    padding: 0.75rem 0.5rem;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-color: var(--aside-bg-color);
+    color: var(--white);
+    caret-color: var(--submit-btn-color);
+}
+
+.edit-profile-div input:focus {
+    outline: none;
+    border: 2px solid var(--submit-btn-color);
+}
+
+.modal-actions {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    padding-top: 1rem;
+}
+
+.edit-profile-img-div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.edit-profile-logo-img {
+    max-width: 5rem;
+    margin: 1rem 0rem;
+}
+
+.edit-profile-logo-img img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+.actions-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.edit-profile-submit-btn {
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.close-modal-txt {
+    color: var(--red-500);
+}
+
+.close-modal-txt:hover {
+    color: var(--red-600);
+}
+
+@media only screen and (max-width: 768px) {
+    .modal {
+        min-width: 35rem;
+        padding-right: 1rem;
+    }
+
+    .editpost-textarea { 
+        width: 35rem;
+    }
+
+    .edit-profile-div input {
+        width: 35rem;
+     }
+ }
+
+ @media only screen and (max-width: 600px) {
+    .modal {
+        min-width: 25rem;
+    }
+
+    .editpost-textarea { 
+        width: 25rem;
+    }
+
+    .edit-profile-div input {
+        width: 25rem;
+     }
+ }
+
+ @media only screen and (max-width: 450px) {
+    .modal {
+        min-width: 20rem;
+    }
+
+    .editpost-textarea { 
+        width: 20rem;
+    }
+
+    .edit-profile-div input {
+        width: 20rem;
+     }
+ }

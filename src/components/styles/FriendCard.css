@@ -1,0 +1,87 @@
+.friendcard-div {
+    padding: 1rem;
+    border-bottom: 1px solid var(--line-color);
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.friendcard-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.friend-user-img {
+    max-width: 3.5rem;
+}
+
+.friend-user-img img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 50%;
+}
+
+.friendcard-info-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.friendcard-info-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.friendcard-info-name {
+    font-weight: bold;
+}
+
+.friendcard-info-username {
+    color: var(--username-color);
+}
+
+.friendcard-div:hover {
+    background-color: var(--aside-bg-color);
+    cursor: pointer;
+}
+
+/* Friend button styles */
+.friend-btn {
+    background-color: #2E8B57; /* SeaGreen */
+    color: #ffffff;
+    padding: 0.25rem 1rem;
+    border-radius: 2.5rem;
+    font-weight: 500;
+    border: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Soft text shadow */
+}
+
+/* Unfriend button styles */
+.unfriend-btn {
+    background-color: transparent;
+    color: #8B0000; /* DarkRed */
+    padding: 0.25rem 1rem;
+    border-radius: 2.5rem;
+    font-weight: 500;
+    border: 1px solid #8B0000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Soft text shadow */
+}
+
+/* Hover effects */
+.friend-btn:hover, .unfriend-btn:hover {
+    transform: scale(1.03); /* Slight enlargement */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    cursor: pointer;
+}
+
+/* Center text */
+.suggest-follow-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}

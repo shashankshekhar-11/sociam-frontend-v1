@@ -1,0 +1,126 @@
+.suggestion-bar {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 90%;
+    position: fixed;
+    /* z-index: 1; */
+    top: 4.65rem;
+    right: 0;
+    left: auto;
+    border-left: 1px solid var(--line-color);
+    overflow-y: auto;
+}
+
+.suggestion-heading {
+    padding: 1rem 0rem 1rem 1rem;
+    /* margin-bottom: 1rem; */
+    border-bottom: 1px solid var(--line-color);
+}
+
+.suggestion-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+}
+
+.suggested-user-div {
+    padding: 0.8rem 0rem;
+}
+
+.suggested-user-img {
+    width: 3.5rem;
+    padding-right: 0.5rem;
+}
+
+.suggested-user-img img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 50%;
+}
+
+.suggested-user-info-div {
+    padding-left: 0.5rem;
+}
+
+.suggested-user-name {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.suggested-user-username {
+    max-width: 9rem !important;
+    overflow: hidden;
+    color: var(--username-color);
+}
+
+.suggest-follow-btn {
+    padding: 0.25rem 1rem;
+    border-radius: 2.5rem;
+    font-weight: 450;
+}
+
+.isActive {
+    background-color: var(--aside-bg-color);
+}
+
+.suggestion-div:hover {
+    background-color: var(--aside-bg-color);
+    cursor: pointer;
+}
+
+.suggest-follow-btn:hover {
+    color: var(--blue-500);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .suggestion-bar {
+        display: none;
+    }
+
+}
+
+.suggestion-bar::-webkit-scrollbar {
+    display: none;
+}
+
+/* General button styles */
+.suggest-follow-btn {
+    padding: 0.25rem 1rem;
+    border-radius: 2.5rem;
+    font-weight: 450;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Add Friend button */
+.add-friend-btn {
+    background-color: #2E8B57; /* SeaGreen */
+    color: #ffffff;
+    border: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Unfriend button */
+.unfriend-btn {
+    background-color: transparent;
+    color: #8B0000; /* DarkRed */
+    border: 1px solid #8B0000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Hover effects */
+.add-friend-btn:hover, .unfriend-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
